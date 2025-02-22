@@ -22,6 +22,17 @@ Open a terminal window in the same directory where the `Dockerfile` from this re
 docker build -t my-jenkins .
 ```
 
+Need to give an access for all credsStore
+{
+  "auths": {},
+  "credsStore": "desktop"
+}
+
+remove credStore or make desktop to null to access any.
+
+use nano ~/.docker/config.json
+to edit this
+
 ## Step 3
 
 Start Jenkins:
@@ -29,6 +40,8 @@ Start Jenkins:
 ```
 docker compose up -d
 ```
+
+Need to login to docker using login -u username
 
 ## Step 4
 
